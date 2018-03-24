@@ -1,0 +1,38 @@
+<div class= "main">
+<mat-form-field class = "form-field">
+  <mat-select placeholder="Accounts" [(value)]="account">
+    <mat-option *ngFor="let account of accounts" [value]="account">
+      {{ account }}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+
+
+<!-- <mat-form-field class = "form-field">
+  <mat-select placeholder="Contract" [(value)]="contract">
+    <mat-option *ngFor="let contract of contracts" [value]="contract">
+      {{ contract }}
+    </mat-option>
+  </mat-select>
+</mat-form-field> -->
+
+<div class = "slider">
+<mat-slider [(ngModel)] = "value" min="1" max="100" step="1"></mat-slider>
+{{value}}
+</div>
+
+
+<div class = "button">
+<button (click)="bid()" mat-raised-button color="primary" >Confirm</button>
+<button (click)="get()" mat-raised-button color="primary" >Get</button>
+</div>
+<div class= "text">{{highestBidder}} </div>
+<div class= "text"><p></p>{{highestBid}} </div>
+<div class= "text"><p></p>{{contract}} </div>
+
+
+
+<div class = "button">
+<button class="button" (click)="makeSC()" mat-raised-button color="primary" >Make</button>
+</div>
+</div>
