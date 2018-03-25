@@ -6,7 +6,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 Run 'sh install.sh' to start install routine.
 
 ## Start Angular CLI and Ganache
-Run 'sh start.sh' to start install routine.
+Run 'sh start.sh' to start Angular CLI and Ganache.
 
 ## Development server
 
