@@ -2,8 +2,9 @@ import { Injectable } from '@angular/core';
 import { Web3ConnectorService } from './web3-connector.service';
 import { HttpClient } from '@angular/common/http'
 
-const contract = require("truffle-contract");
+import * as contract from "truffle-contract";
 const auctionContract= require('../../build/contracts/SimpleAuction.json');
+
 
 @Injectable()
 export class ContractFunctionsService {
@@ -17,7 +18,7 @@ bid(bidValue: number, sender: any, contract: any){
   console.log(contract);
   return this.auctionInstance.at(contract).then(inst => {
     return inst.bid({from: sender, value: bidValue})
-  }).then(res => console.log(res)).catch(err => console.log(err));
+  });
 }
 
 getHighestBidder(contract: any) {

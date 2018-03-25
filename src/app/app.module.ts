@@ -22,7 +22,7 @@ import {MatDividerModule} from '@angular/material/divider';
 import { Web3ConnectorService  } from './web3-connector.service';
 import { ContractFunctionsService  } from './contract-functions.service';
 import { Web3FunctionsService  } from './web3-functions.service';
-import { HomeComponent } from './home/home.component';
+import { BeneficiaryComponent } from './beneficiary/beneficiary.component';
 
 import { MatSelectModule } from '@angular/material/select';
 import { CreateComponent, CreateDialog } from './create/create.component';
@@ -30,14 +30,24 @@ import { CreateComponent, CreateDialog } from './create/create.component';
 import {MatDialogModule} from '@angular/material/dialog';
 
 import { QRCodeModule } from 'angularx-qrcode';
+import { BidComponent } from './bid/bid.component';
+import { ClipboardModule } from 'ngx-clipboard';
+import { MatSnackBarModule } from '@angular/material';
+import { BiddingPortalComponent } from './bidding-portal/bidding-portal.component';
+import { HomeComponent } from './home/home.component';
+
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
+    BeneficiaryComponent,
     CreateComponent,
-    CreateDialog
+    CreateDialog,
+    BidComponent,
+    BiddingPortalComponent,
+    HomeComponent
   ],
   entryComponents:[
     CreateDialog
@@ -61,7 +71,9 @@ import { QRCodeModule } from 'angularx-qrcode';
     HttpClientModule,
     MatSelectModule,
     QRCodeModule,
-    MatDialogModule
+    MatDialogModule,
+    ClipboardModule,
+    MatSnackBarModule,
   ],
   providers: [Web3ConnectorService, ContractFunctionsService, Web3FunctionsService],
   bootstrap: [AppComponent]

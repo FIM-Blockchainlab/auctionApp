@@ -8,6 +8,8 @@ import { Location } from '@angular/common';
 import {Inject} from '@angular/core';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
 
+import { MatSnackBar } from '@angular/material';
+
 @Component({
   selector: 'create-home',
   templateUrl: './create.component.html',
@@ -67,12 +69,19 @@ export class CreateComponent implements OnInit {
   
     constructor(
       public dialogRef: MatDialogRef<CreateDialog>,
-      @Inject(MAT_DIALOG_DATA) public data: any) { }
+      @Inject(MAT_DIALOG_DATA) public data: any,
+      public snackBar: MatSnackBar
+      ) { }
   
     closeDialog(): void {
       this.dialogRef.close();
     }
 
+    openSnackBar(message: string, action: string) {
+    this.snackBar.open(message, action, {
+      duration: 2000,
+    });
+  }
 }
 
 

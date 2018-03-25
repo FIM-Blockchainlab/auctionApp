@@ -1,6 +1,17 @@
 <div class="main">
-<qrcode [qrdata]="data.contract" [size]="256" [level]="'M'" ></qrcode>
+        <qrcode [qrdata]="data.contract" [size]="512" [level]="'M'" ></qrcode>
 </div>
-<div class = "main">
-<button class="button" routerLink="/home/{{data.contract}}" (click)="closeDialog()" mat-raised-button color="primary" >Your Contract Link!</button>
+
+<div class = "main">        
+        <mat-form-field class="input">
+            <input matInput [(ngModel)]= "data.contract" disabled = true >
+        </mat-form-field>
 </div>
+        
+<div>
+        <button class="button" routerLink="/beneficiary/{{data.contract}}" (click)="closeDialog()" mat-raised-button color="primary" ngxClipboard [cbContent]="data.contract" (cbOnSuccess)="openSnackBar('copy to clipboard', 'exit')" >Open Beneficiary Interface</button>
+        <button class="button" mat-raised-button color="primary" ngxClipboard [cbContent]="data.contract" (cbOnSuccess)="openSnackBar('copy to clipboard', 'exit')" >Copy Contract Address</button>
+</div>
+       
+
+    

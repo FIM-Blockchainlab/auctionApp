@@ -6,28 +6,11 @@
     transform: translate(-50%, -50%);
 }
 
-.form-field {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.button-holder{
+    width: 100%;
 }
 
-.button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 5px;
-}
-
-.slider {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.text {
-    margin: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.button{
+    margin: 5%;
+    width: 100%;
 }

@@ -1,0 +1,53 @@
+
+<div class="main">
+    <mat-card class="main-card">
+    
+        <mat-card class="card-top">
+            <mat-card-title class="card-title">Bidder Interface</mat-card-title>
+            <!-- <img src="..." mat-card-avatar class="avatar"> -->
+          </mat-card>
+    
+          <mat-form-field class="input">
+              <input matInput [(ngModel)]= "contract" placeholder="contract" disabled = true >
+          </mat-form-field>
+          
+    
+    <mat-form-field class = "form-field">
+      <mat-select placeholder="Accounts" [(value)]="account">
+        <mat-option *ngFor="let account of accounts" [value]="account">
+          {{ account }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    
+    
+    <!-- <mat-form-field class = "form-field">
+      <mat-select placeholder="Contract" [(value)]="contract">
+        <mat-option *ngFor="let contract of contracts" [value]="contract">
+          {{ contract }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field> -->
+    
+    
+    <mat-slider class = "slider" [(ngModel)] = "value" min="1" max="100" step="1"></mat-slider>
+    {{value}}
+    
+    
+    
+    <div class = "button">
+    <button (click)="bid()" mat-raised-button color="primary" >Confirm</button>
+    <!-- <button (click)="get()" mat-raised-button color="primary" >Get</button> -->
+    </div>
+
+<!--     <mat-form-field class="input">
+        <input matInput [(ngModel)]= "highestBidder" placeholder="highestBidder" disabled = true >
+    </mat-form-field>
+    <mat-form-field class="input">
+        <input matInput [(ngModel)]= "highestBid" placeholder="highestBid" disabled = true >
+    </mat-form-field> -->
+    
+    
+    </mat-card>
+    
+    </div>

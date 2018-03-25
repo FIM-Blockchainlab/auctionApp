@@ -1,0 +1,30 @@
+
+<div class="main">
+<mat-card class="main-card">
+
+    <mat-card class="card-top">
+        <mat-card-title class="card-title">Beneficiary Interface</mat-card-title>
+        <!-- <img src="..." mat-card-avatar class="avatar"> -->
+      </mat-card>
+
+      <mat-form-field class="input">
+          <input matInput [(ngModel)]= "contract" placeholder="contract" disabled = true >
+      </mat-form-field>
+      
+
+
+<div class = "button">
+<button (click)="get()" mat-raised-button color="primary" >Get</button>
+</div>
+
+<mat-form-field class="input">
+    <input matInput [(ngModel)]= "highestBidder" placeholder="highestBidder" disabled = true >
+</mat-form-field>
+
+<mat-form-field class="input">
+    <input matInput [(ngModel)]= "highestBid" placeholder="highestBid" disabled = true >
+</mat-form-field>
+
+</mat-card>
+
+</div>

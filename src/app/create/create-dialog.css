@@ -7,5 +7,10 @@
 
 .button {
     width: 256px;
+    margin: 5px;
+}
+
+.input {
+    width: 512px;
 }
 

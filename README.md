@@ -2,6 +2,12 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.8.
 
+## Install dependecnies including Angular CLI
+Run 'sh install.sh' to start install routine.
+
+## Start Angular CLI and Ganache
+Run 'sh start.sh' to start install routine.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

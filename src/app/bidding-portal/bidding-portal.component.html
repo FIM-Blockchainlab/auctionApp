@@ -1,0 +1,12 @@
+<div class = "main">       
+<div class = "hodler">
+    <mat-form-field class="input">
+        <input matInput [(ngModel)]= "contract" placeholder="Please Enter Contract Address">
+    </mat-form-field>
+
+
+
+    <button class="button" routerLink="/bid/{{contract}}"  mat-raised-button color="primary" >Open Auction</button>
+
+</div> 
+</div>
